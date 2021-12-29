@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MySoleLife">
         <activity
+            android:name=".auth.JoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".auth.IntroActivity"
             android:exported="false" />
         <activity
@@ -23,7 +29,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
