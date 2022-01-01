@@ -67,7 +67,7 @@ class JoinActivity : AppCompatActivity() {
                             //성공했으면 MainActivity로 이동해라.
                             val intent = Intent(this, MainActivity::class.java)
                             //기존에 Activity를 다 날려버린다.
-                            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+                            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                             startActivity(intent)
 
                         } else {
