@@ -29,7 +29,6 @@ class TalkFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_talk, container, false)
 
         binding.homeTap.setOnClickListener {
-            Log.d("StoreFragment", "tipTap")
             it.findNavController().navigate(R.id.action_talkFragment_to_homeFragment)
         }
 

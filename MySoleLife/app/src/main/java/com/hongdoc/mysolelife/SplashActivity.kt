@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         auth = Firebase.auth
-        // 로그인이 된 상태에서 앱을 켤 시 Intro페이지는 넘어가고 MainActivity로 바로 넘어가게 함
+        // 로그인이 된 상태에서 앱을 켤 시 IntroPage는 넘어가고 MainActivity로 바로 넘어가게 함
         if(auth.currentUser?.uid == null){
 
             Log.d("SplashActivity", "null")

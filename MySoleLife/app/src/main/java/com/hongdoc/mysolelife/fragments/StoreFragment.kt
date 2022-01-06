@@ -28,7 +28,6 @@ class StoreFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_store, container, false)
 
         binding.homeTap.setOnClickListener {
-            Log.d("StoreFragment", "tipTap")
             it.findNavController().navigate(R.id.action_storeFragment_to_homeFragment)
         }
 
