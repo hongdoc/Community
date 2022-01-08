@@ -6,16 +6,21 @@
         <entry key="app/src/main/res/drawable/background_radius.xml" value="0.33611111111111114" />
         <entry key="app/src/main/res/drawable/background_radius_yellow.xml" value="0.3333333333333333" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/activity_content_list.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/layout/activity_intro.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_join.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_login 2.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main 2.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.34375" />
+        <entry key="app/src/main/res/layout/content_rv_item.xml" value="0.3416666666666667" />
         <entry key="app/src/main/res/layout/fragment_bookmark.xml" value="0.22826086956521738" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_store.xml" value="0.22826086956521738" />
         <entry key="app/src/main/res/layout/fragment_talk.xml" value="0.22826086956521738" />
         <entry key="app/src/main/res/layout/fragment_tip.xml" value="0.25" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3578125" />
       </map>
     </option>
   </component>

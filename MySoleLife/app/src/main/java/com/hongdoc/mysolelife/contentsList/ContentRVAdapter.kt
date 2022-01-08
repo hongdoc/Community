@@ -4,10 +4,11 @@ import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.hongdoc.mysolelife.R
 
-class ContentRVAdapter(val items : ArrayList<String>) : RecyclerView.Adapter<ContentRVAdapter.Viewholer>() {
+class ContentRVAdapter(val items : ArrayList<ContentModel>) : RecyclerView.Adapter<ContentRVAdapter.Viewholer>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContentRVAdapter.Viewholer {
 
@@ -25,7 +26,10 @@ class ContentRVAdapter(val items : ArrayList<String>) : RecyclerView.Adapter<Con
 
     inner class Viewholer(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-        fun bindItems(item : String){
+        fun bindItems(item : ContentModel){
+
+            var contentTitle = itemView.findViewById<TextView>(R.id.textArea)
+            contentTitle.text = item.title
 
         }
     }
