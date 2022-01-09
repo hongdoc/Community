@@ -13,6 +13,11 @@ import com.hongdoc.mysolelife.R
 
 class ContentRVAdapter(val context : Context, val items : ArrayList<ContentModel>) : RecyclerView.Adapter<ContentRVAdapter.Viewholer>() {
 
+    interface ItemClick {
+        fun onClick(view : View, position: Int)
+    }
+    var itemClick : ItemClick? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContentRVAdapter.Viewholer {
 
         val v = LayoutInflater.from(parent.context).inflate(R.layout.content_rv_item, parent, false)
@@ -20,6 +25,11 @@ class ContentRVAdapter(val context : Context, val items : ArrayList<ContentModel
     }
 
     override fun onBindViewHolder(holder: ContentRVAdapter.Viewholer, position: Int) {
+        if(itemClick != null){
+            holder.itemView.setOnClickListener { v->
+                itemClick?.onClick(v, position)
+            }
+        }
         holder.bindItems(items[position])
     }
 

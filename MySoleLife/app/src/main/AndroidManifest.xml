@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MySoleLife">
         <activity
+            android:name=".contentsList.ContentShowActivity"
+            android:exported="false" />
+        <activity
             android:name=".contentsList.ContentListActivity"
             android:exported="false" />
         <activity
