@@ -1,13 +1,18 @@
 package com.hongdoc.mysolelife.contentsList
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.hongdoc.mysolelife.R
@@ -22,6 +27,18 @@ class ContentListActivity : AppCompatActivity() {
         // Write a message to the database
         val database = Firebase.database
         val myRef = database.getReference("contents")
+
+        val postListener = object : ValueEventListener{
+            override fun onDataChange(dataSnapshow: DataSnapshot){
+
+                Log.d("ContentListActivity", dataSnapshot.toString())
+
+            }
+
+            override fun onCancelled(databaseError: DatabaseError){
+                Log.w("ContentListActivity", "loadPost:onCancelled", databaseError.toException())
+            }
+        }
 
 //        myRef.push().setValue(
 //            ContentModel("title1", "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FblYPPY%2Fbtq66v0S4wu%2FRmuhpkXUO4FOcrlOmVG4G1%2Fimg.png","https://philosopher-chan.tistory.com/1235?category=941578")
